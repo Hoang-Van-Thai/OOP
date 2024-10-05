@@ -1,0 +1,91 @@
+﻿
+@{
+    Layout = null;
+}
+<section class="my-lg-14 my-8">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-12 col-md-6 col-lg-4 order-lg-1 order-2">
+                <img src="https://media.loveitopcdn.com/3807/thumb/logo-nong-san-nha-que-compressed.jpg" alt="Signup Image" class="img-fluid">
+            </div>
+            <div class="col-12 col-md-6 offset-lg-1 col-lg-5 order-lg-2 order-1 signup-container">
+                <div class="mb-lg-9 mb-5 text-center">
+                    <h1 class="mb-1 h2 fw-bold">Đăng ký</h1>
+                    <p>Chào mừng các bạn đến với <span class="text-primary">Vườn Nông Sản Tươi Ngon!</span></p>
+                </div>
+                <form method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
+                    <input type="hidden" name="__RequestVerificationToken" value="YOUR_TOKEN_HERE" />
+                    <div class="row g-4">
+                        <div class="col-12 col-md-6">
+                            <input type="text" name="ho" class="form-control" placeholder="Họ" required />
+                            <div class="text-danger" id="ho-error"></div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <input type="text" name="ten" class="form-control" placeholder="Tên" required />
+                            <div class="text-danger" id="ten-error"></div>
+                        </div>
+                        <div class="col-12">
+                            <input type="email" name="email" class="form-control" placeholder="Email" required />
+                            <div class="text-danger" id="email-error"></div>
+                        </div>
+                        <div class="col-12">
+                            <div class="password-field">
+                                <input type="password" name="password" class="form-control" placeholder="Mật khẩu" required />
+                                <span class="toggle-password bi bi-eye-slash" onclick="togglePassword()"></span>
+                                <div class="text-danger" id="password-error"></div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <input type="tel" name="phone" class="form-control" placeholder="Số điện thoại" required />
+                            <div class="text-danger" id="phone-error"></div>
+                        </div>
+                        <div class="col-12">
+                            <label for="avatar">Avatar:</label>
+                            <input type="file" id="avatar" name="avatar" accept="image/*" class="form-control-file" />
+                            <div class="text-danger" id="avatar-error"></div>
+                        </div>
+                        <div class="col-12 d-grid">
+                            <button type="submit" class="btn btn-custom">Đăng ký</button>
+                        </div>
+                    </div>
+                </form>
+                <p class="mt-4 text-center">
+                    <small>Bằng cách tiếp tục, bạn đồng ý với <a href="#!" class="link-primary">Điều khoản dịch vụ</a> &amp; <a href="#!" class="link-primary">Chính sách quyền riêng tư</a> của chúng tôi</small>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <script src="path/to/jquery.js"></script>
+    <script>
+        function togglePassword() {
+            const passwordInput = document.querySelector('input[name="password"]');
+            const toggleIcon = document.querySelector('.toggle-password');
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleIcon.classList.replace('bi-eye-slash', 'bi-eye');
+            } else {
+                passwordInput.type = 'password';
+                toggleIcon.classList.replace('bi-eye', 'bi-eye-slash');
+            }
+        }
+
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                var forms = document.getElementsByClassName('needs-validation');
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+}

@@ -1,0 +1,57 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\webbannongsan\\webbannongsan\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B3D264AB-6B83-4413-8437-11ABD9F51E10}|webbannongsan\\webbannongsan.csproj|d:\\webbannongsan\\webbannongsan\\webbannongsan\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3D264AB-6B83-4413-8437-11ABD9F51E10}|webbannongsan\\webbannongsan.csproj|solutionrelative:webbannongsan\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3D264AB-6B83-4413-8437-11ABD9F51E10}|webbannongsan\\webbannongsan.csproj|D:\\webbannongsan\\webbannongsan\\webbannongsan\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B3D264AB-6B83-4413-8437-11ABD9F51E10}|webbannongsan\\webbannongsan.csproj|solutionrelative:webbannongsan\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "D:\\webbannongsan\\webbannongsan\\webbannongsan\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "webbannongsan\\Views\\Account\\Register.cshtml",
+              "ToolTip": "D:\\webbannongsan\\webbannongsan\\webbannongsan\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "webbannongsan\\Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-02T05:39:35.843Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\webbannongsan\\webbannongsan\\webbannongsan\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "webbannongsan\\Controllers\\AccountController.cs",
+              "ToolTip": "D:\\webbannongsan\\webbannongsan\\webbannongsan\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "webbannongsan\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAUwDYAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-02T05:17:09.629Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
