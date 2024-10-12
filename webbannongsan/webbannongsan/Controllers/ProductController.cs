@@ -11,13 +11,14 @@ namespace webbannongsan.Controllers
     public class ProductController : Controller
     {
         // GET: Product
+        DB_TadNongSanEntities DB = new DB_TadNongSanEntities();
         public ActionResult Index()
         {
             return View();
         }
         public ActionResult Product(string priceRange, string category, int?[] discount)
         {
-            DB_TadNongSanEntities DB = new DB_TadNongSanEntities();
+            
             List<Product> products = DB.Products.ToList();
             ViewBag.categories = DB.Categories.ToList();
             ViewBag.priceRange = priceRange;
@@ -42,7 +43,7 @@ namespace webbannongsan.Controllers
         }
         public ActionResult DetailProduct(int? detailPrID)
         {
-            DB_TadNongSanEntities DB = new DB_TadNongSanEntities();
+    
             List<Product> products = DB.Products.Where(i => i.ProductID == detailPrID).ToList();
             Product product = products.First();
             return View(product);

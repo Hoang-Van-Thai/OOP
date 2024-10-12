@@ -25,14 +25,14 @@
                 <input class="search" type="search" id="search" name="query" placeholder="Search..."  />
             </form>
             <a href="#"><img src="~/image/heart.png"></a>
-            <a href="/Account/Login"><img src="~/image/user.png"></a>
-            <a href="#"><img src="~/image/cart.png"></a>
+            <a href=@(Session["Account"]==null?"/Account/Login":"/Account/Profile")><img src="~/image/user.png"></a>
+            <a href="/Cart/CartIndex"><img src="~/image/cart.png"></a>
         </div>
     </header>
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer style="background-color: #4CAF50; color: white; padding: 20px; text-align: center;">
+        <footer style="background-color: #6ef384; color: black; padding: 20px; text-align: center;">
             <div>
                 <h3>Công Ty TNHH Nông Sản Xanh</h3>
                 <p>Địa chỉ: 123 Đường Lúa Vàng, Phường Cây Trồng, Quận Nông Sản, TP. HCM</p>
@@ -41,9 +41,9 @@
             </div>
 
             <div style="margin-top: 20px;">
-                <a href="/chinh-sach-bao-mat" style="color: white; margin-right: 15px;">Chính Sách Bảo Mật</a>
-                <a href="/dieu-khoan-su-dung" style="color: white; margin-right: 15px;">Điều Khoản Sử Dụng</a>
-                <a href="/lien-he" style="color: white;">Liên Hệ</a>
+                <a href="/chinh-sach-bao-mat" style="color: black; margin-right: 15px;">Chính Sách Bảo Mật</a>
+                <a href="/dieu-khoan-su-dung" style="color: black; margin-right: 15px;">Điều Khoản Sử Dụng</a>
+                <a href="/lien-he" style="color: black;">Liên Hệ</a>
             </div>
 
             <div style="margin-top: 20px;">

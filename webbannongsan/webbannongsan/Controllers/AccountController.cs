@@ -27,8 +27,13 @@ namespace webbannongsan.Controllers
             
             var user = DB.Accounts.FirstOrDefault(u => u.Email == email && u.Password == password);
             ViewBag.user = user;
-            if (user != null && BCrypt.Net.BCrypt.Verify(password, user.Password))
+            if (user != null)
             {
+                Session["Account"]=user;
+                if(user.RoleID== "ADMIN")
+                {
+                    return RedirectToAction("ListProduct", "ProductAdmin", new { area = "Admin" });
+                }
                 return RedirectToAction("Index","Home");
 
             }
@@ -46,50 +51,51 @@ namespace webbannongsan.Controllers
             return View();
         }
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Register(string ho, string ten, string email, string password, string phone, HttpPostedFileBase avatar)
+        public ActionResult Register(Account model)
         {
-            if (ModelState.IsValid)
+            if (model == null)
             {
-                // Kiểm tra xem email đã tồn tại trong cơ sở dữ liệu chưa
-                var existingUser = DB.Accounts.FirstOrDefault(u => u.Email == email);
+                return View(model);
+            }
+            if (string.IsNullOrEmpty( model.FirstName) == true)
+            {
+                return View(model);
+            }
+            if (string.IsNullOrEmpty(model.LastName) == true)
+            {
+                return View(model);
+            }
+
+            if (string.IsNullOrEmpty(model.Email))
+            {
+                return View(model);
+            }
+            else
+            {
+                var existingUser = DB.Accounts.FirstOrDefault(u => u.Email.ToLower() == model.Email.ToLower());
                 if (existingUser != null)
                 {
                     return View();
                 }
-
-                // Xử lý tệp avatar
-                string avatarPath = null;
-                if (avatar != null && avatar.ContentLength > 0)
-                {
-                    var fileName = Path.GetFileName(avatar.FileName);
-                    var path = Path.Combine(Server.MapPath("~/Content/Avatars"), fileName);
-                    avatar.SaveAs(path);
-                    avatarPath = "/Content/Avatars/" + fileName; // Lưu đường dẫn
-                }
-
-                // Tạo mới tài khoản người dùng
-                var user = new Account
-                {
-                    AccountID= GenerateNewAccountId(),
-                    FirstName = ho,
-                    LastName = ten,
-                    Email = email,
-                    Password = BCrypt.Net.BCrypt.HashPassword(password), // Băm mật khẩu
-                    PhoneNumber = phone,
-                    Avatar = avatarPath,
-                  
-                };
-
-                // Lưu vào cơ sở dữ liệu
-                DB.Accounts.Add(user);
-                DB.SaveChanges();
-
-                // Chuyển hướng đến trang đăng nhập hoặc trang khác
-                return RedirectToAction("Login", "Account");
             }
-
-            return View();
+            if (string.IsNullOrEmpty(model.Password) == true)
+            {
+                return View(model);
+            }
+            if (string.IsNullOrEmpty(model.PhoneNumber)==true)
+            {
+                return View(model);
+            }
+            model.RoleID = "GUEST";
+            DB.Accounts.Add(model);
+            DB.SaveChanges();
+            return RedirectToAction("Login");   
+        }
+        public ActionResult Profile()
+        {
+            Account Ac = (Account)Session["Account"];
+            Account account = DB.Accounts.FirstOrDefault(i=>i.AccountID== Ac.AccountID);
+            return View(account);
         }
         // Phương thức để tạo AccountId mới
         private int GenerateNewAccountId()

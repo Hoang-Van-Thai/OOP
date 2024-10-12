@@ -73,8 +73,8 @@
                         <form  method="get" action="~/Product/DetailProduct">
                             <button type="submit" name="detailPrID" value="@item.ProductID">Chi tiết</button>
                         </form>
-                        <form  method="get" action="#">
-                            <button type="submit" name="buyNow" value="@item.ProductID">Mua ngay</button>
+                        <form  method="post" action="/Cart/CartIndex?ProductID=@item.ProductID">
+                            <button type="submit" name="ProductID" value="@item.ProductID">Mua ngay</button>
                         </form>
                     </div>
     

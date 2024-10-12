@@ -10,13 +10,15 @@ namespace webbannongsan.Controllers
     public class HomeController : Controller
     {
         // GET: Home
+        DB_TadNongSanEntities DB = new DB_TadNongSanEntities();
         public ActionResult Index()
         {
-            return View();
+            var listProductCoupon = DB.Products.Where(i=>i.CouponID!=null).ToList();
+            return View(listProductCoupon);
         }
         public ActionResult Search(string query)
         {
-            DB_TadNongSanEntities DB = new DB_TadNongSanEntities();
+           
             List<Product> products = DB.Products.ToList();
             ViewBag.categories = DB.Categories.ToList();
             if (query != null) 
