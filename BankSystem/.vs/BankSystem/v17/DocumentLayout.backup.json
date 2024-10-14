@@ -1,0 +1,211 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\1.DH_TMMT\\dotnet\\BankSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D4C7AE3D-6B54-4F30-A4CE-2F89BB33114C}|BankSystem\\BankSystem.csproj|d:\\1.dh_tmmt\\dotnet\\banksystem\\banksystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4C7AE3D-6B54-4F30-A4CE-2F89BB33114C}|BankSystem\\BankSystem.csproj|solutionrelative:banksystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4C7AE3D-6B54-4F30-A4CE-2F89BB33114C}|BankSystem\\BankSystem.csproj|d:\\1.dh_tmmt\\dotnet\\banksystem\\banksystem\\controller\\icontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4C7AE3D-6B54-4F30-A4CE-2F89BB33114C}|BankSystem\\BankSystem.csproj|solutionrelative:banksystem\\controller\\icontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4C7AE3D-6B54-4F30-A4CE-2F89BB33114C}|BankSystem\\BankSystem.csproj|d:\\1.dh_tmmt\\dotnet\\banksystem\\banksystem\\controller\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4C7AE3D-6B54-4F30-A4CE-2F89BB33114C}|BankSystem\\BankSystem.csproj|solutionrelative:banksystem\\controller\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4C7AE3D-6B54-4F30-A4CE-2F89BB33114C}|BankSystem\\BankSystem.csproj|d:\\1.dh_tmmt\\dotnet\\banksystem\\banksystem\\model\\employeemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4C7AE3D-6B54-4F30-A4CE-2F89BB33114C}|BankSystem\\BankSystem.csproj|solutionrelative:banksystem\\model\\employeemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4C7AE3D-6B54-4F30-A4CE-2F89BB33114C}|BankSystem\\BankSystem.csproj|d:\\1.dh_tmmt\\dotnet\\banksystem\\banksystem\\view\\iview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4C7AE3D-6B54-4F30-A4CE-2F89BB33114C}|BankSystem\\BankSystem.csproj|solutionrelative:banksystem\\view\\iview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4C7AE3D-6B54-4F30-A4CE-2F89BB33114C}|BankSystem\\BankSystem.csproj|d:\\1.dh_tmmt\\dotnet\\banksystem\\banksystem\\model\\imodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4C7AE3D-6B54-4F30-A4CE-2F89BB33114C}|BankSystem\\BankSystem.csproj|solutionrelative:banksystem\\model\\imodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4C7AE3D-6B54-4F30-A4CE-2F89BB33114C}|BankSystem\\BankSystem.csproj|d:\\1.dh_tmmt\\dotnet\\banksystem\\banksystem\\view\\branchview.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4C7AE3D-6B54-4F30-A4CE-2F89BB33114C}|BankSystem\\BankSystem.csproj|solutionrelative:banksystem\\view\\branchview.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4C7AE3D-6B54-4F30-A4CE-2F89BB33114C}|BankSystem\\BankSystem.csproj|d:\\1.dh_tmmt\\dotnet\\banksystem\\banksystem\\view\\homeview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D4C7AE3D-6B54-4F30-A4CE-2F89BB33114C}|BankSystem\\BankSystem.csproj|solutionrelative:banksystem\\view\\homeview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4C7AE3D-6B54-4F30-A4CE-2F89BB33114C}|BankSystem\\BankSystem.csproj|D:\\1.DH_TMMT\\dotnet\\BankSystem\\banksystem\\view\\branchview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D4C7AE3D-6B54-4F30-A4CE-2F89BB33114C}|BankSystem\\BankSystem.csproj|solutionrelative:banksystem\\view\\branchview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4C7AE3D-6B54-4F30-A4CE-2F89BB33114C}|BankSystem\\BankSystem.csproj|D:\\1.DH_TMMT\\dotnet\\BankSystem\\banksystem\\view\\employeeview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D4C7AE3D-6B54-4F30-A4CE-2F89BB33114C}|BankSystem\\BankSystem.csproj|solutionrelative:banksystem\\view\\employeeview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4C7AE3D-6B54-4F30-A4CE-2F89BB33114C}|BankSystem\\BankSystem.csproj|d:\\1.dh_tmmt\\dotnet\\banksystem\\banksystem\\view\\employeeview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4C7AE3D-6B54-4F30-A4CE-2F89BB33114C}|BankSystem\\BankSystem.csproj|solutionrelative:banksystem\\view\\employeeview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\1.DH_TMMT\\dotnet\\BankSystem\\BankSystem\\Program.cs",
+              "RelativeDocumentMoniker": "BankSystem\\Program.cs",
+              "ToolTip": "D:\\1.DH_TMMT\\dotnet\\BankSystem\\BankSystem\\Program.cs",
+              "RelativeToolTip": "BankSystem\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T09:31:57.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EmployeeModel.cs",
+              "DocumentMoniker": "D:\\1.DH_TMMT\\dotnet\\BankSystem\\BankSystem\\Model\\EmployeeModel.cs",
+              "RelativeDocumentMoniker": "BankSystem\\Model\\EmployeeModel.cs",
+              "ToolTip": "D:\\1.DH_TMMT\\dotnet\\BankSystem\\BankSystem\\Model\\EmployeeModel.cs",
+              "RelativeToolTip": "BankSystem\\Model\\EmployeeModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T09:19:57.209Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EmployeeController.cs",
+              "DocumentMoniker": "D:\\1.DH_TMMT\\dotnet\\BankSystem\\BankSystem\\Controller\\EmployeeController.cs",
+              "RelativeDocumentMoniker": "BankSystem\\Controller\\EmployeeController.cs",
+              "ToolTip": "D:\\1.DH_TMMT\\dotnet\\BankSystem\\BankSystem\\Controller\\EmployeeController.cs",
+              "RelativeToolTip": "BankSystem\\Controller\\EmployeeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T09:19:02.528Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IView.cs",
+              "DocumentMoniker": "D:\\1.DH_TMMT\\dotnet\\BankSystem\\BankSystem\\View\\IView.cs",
+              "RelativeDocumentMoniker": "BankSystem\\View\\IView.cs",
+              "ToolTip": "D:\\1.DH_TMMT\\dotnet\\BankSystem\\BankSystem\\View\\IView.cs",
+              "RelativeToolTip": "BankSystem\\View\\IView.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T09:18:19.374Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IModel.cs",
+              "DocumentMoniker": "D:\\1.DH_TMMT\\dotnet\\BankSystem\\BankSystem\\Model\\IModel.cs",
+              "RelativeDocumentMoniker": "BankSystem\\Model\\IModel.cs",
+              "ToolTip": "D:\\1.DH_TMMT\\dotnet\\BankSystem\\BankSystem\\Model\\IModel.cs",
+              "RelativeToolTip": "BankSystem\\Model\\IModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T09:17:31.364Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IController.cs",
+              "DocumentMoniker": "D:\\1.DH_TMMT\\dotnet\\BankSystem\\BankSystem\\Controller\\IController.cs",
+              "RelativeDocumentMoniker": "BankSystem\\Controller\\IController.cs",
+              "ToolTip": "D:\\1.DH_TMMT\\dotnet\\BankSystem\\BankSystem\\Controller\\IController.cs*",
+              "RelativeToolTip": "BankSystem\\Controller\\IController.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T09:15:59.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BranchView.Designer.cs",
+              "DocumentMoniker": "D:\\1.DH_TMMT\\dotnet\\BankSystem\\BankSystem\\View\\BranchView.Designer.cs",
+              "RelativeDocumentMoniker": "BankSystem\\View\\BranchView.Designer.cs",
+              "ToolTip": "D:\\1.DH_TMMT\\dotnet\\BankSystem\\BankSystem\\View\\BranchView.Designer.cs",
+              "RelativeToolTip": "BankSystem\\View\\BranchView.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T09:41:26.416Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BranchView.cs [Design]",
+              "DocumentMoniker": "D:\\1.DH_TMMT\\dotnet\\BankSystem\\BankSystem\\View\\BranchView.cs",
+              "RelativeDocumentMoniker": "BankSystem\\View\\BranchView.cs",
+              "ToolTip": "D:\\1.DH_TMMT\\dotnet\\BankSystem\\BankSystem\\View\\BranchView.cs [Design]",
+              "RelativeToolTip": "BankSystem\\View\\BranchView.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T08:44:45.389Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HomeView.cs [Design]",
+              "DocumentMoniker": "D:\\1.DH_TMMT\\dotnet\\BankSystem\\BankSystem\\View\\HomeView.cs",
+              "RelativeDocumentMoniker": "BankSystem\\View\\HomeView.cs",
+              "ToolTip": "D:\\1.DH_TMMT\\dotnet\\BankSystem\\BankSystem\\View\\HomeView.cs [Design]",
+              "RelativeToolTip": "BankSystem\\View\\HomeView.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T08:40:11.571Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "EmployeeView.cs",
+              "DocumentMoniker": "D:\\1.DH_TMMT\\dotnet\\BankSystem\\BankSystem\\View\\EmployeeView.cs",
+              "RelativeDocumentMoniker": "BankSystem\\View\\EmployeeView.cs",
+              "ToolTip": "D:\\1.DH_TMMT\\dotnet\\BankSystem\\BankSystem\\View\\EmployeeView.cs",
+              "RelativeToolTip": "BankSystem\\View\\EmployeeView.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAD4vxoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T08:34:06.17Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EmployeeView.cs [Design]",
+              "DocumentMoniker": "D:\\1.DH_TMMT\\dotnet\\BankSystem\\BankSystem\\View\\EmployeeView.cs",
+              "RelativeDocumentMoniker": "BankSystem\\View\\EmployeeView.cs",
+              "ToolTip": "D:\\1.DH_TMMT\\dotnet\\BankSystem\\BankSystem\\View\\EmployeeView.cs [Design]",
+              "RelativeToolTip": "BankSystem\\View\\EmployeeView.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T08:30:44.454Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
