@@ -46,28 +46,47 @@
     <Reference Include="BCrypt.Net-Next, Version=4.0.3.0, Culture=neutral, PublicKeyToken=1e11be04b6288443, processorArchitecture=MSIL">
       <HintPath>..\packages\BCrypt.Net-Next.4.0.3\lib\net472\BCrypt.Net-Next.dll</HintPath>
     </Reference>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="MailKit, Version=4.8.0.0, Culture=neutral, PublicKeyToken=4e064fe7c44a8f1b, processorArchitecture=MSIL">
+      <HintPath>..\packages\MailKit.4.8.0\lib\net47\MailKit.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MimeKit, Version=4.8.0.0, Culture=neutral, PublicKeyToken=bede1c8a46c66814, processorArchitecture=MSIL">
+      <HintPath>..\packages\MimeKit.4.8.0\lib\net47\MimeKit.dll</HintPath>
+    </Reference>
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
-    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    <Reference Include="System.Formats.Asn1, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Formats.Asn1.8.0.1\lib\net462\System.Formats.Asn1.dll</HintPath>
     </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Numerics" />
     <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
     </Reference>
-    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -112,14 +131,58 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\AddressProfile.css">
+      <DependentUpon>AddressProfile.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\AddressProfile.min.css">
+      <DependentUpon>AddressProfile.css</DependentUpon>
+    </Content>
+    <Content Include="Content\CartIndex.css">
+      <DependentUpon>CartIndex.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\CartIndex.min.css">
+      <DependentUpon>CartIndex.css</DependentUpon>
+    </Content>
+    <Content Include="Content\ComfirmPassword.css">
+      <DependentUpon>ComfirmPassword.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\ComfirmPassword.min.css">
+      <DependentUpon>ComfirmPassword.css</DependentUpon>
+    </Content>
+    <Content Include="Content\ConfirmOTP.css">
+      <DependentUpon>ConfirmOTP.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\ConfirmOTP.min.css">
+      <DependentUpon>ConfirmOTP.css</DependentUpon>
+    </Content>
+    <Content Include="Content\DetailProduct.css">
+      <DependentUpon>DetailProduct.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\DetailProduct.min.css">
+      <DependentUpon>DetailProduct.css</DependentUpon>
+    </Content>
+    <Content Include="Content\ForgotPassword.css">
+      <DependentUpon>ForgotPassword.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\ForgotPassword.min.css">
+      <DependentUpon>ForgotPassword.css</DependentUpon>
+    </Content>
     <Content Include="Content\index.min.css">
       <DependentUpon>index.css</DependentUpon>
     </Content>
+    <Content Include="Content\input.css" />
+    <Content Include="Content\output.css" />
     <Content Include="Content\product.css">
       <DependentUpon>product.scss</DependentUpon>
     </Content>
     <Content Include="Content\product.min.css">
       <DependentUpon>product.css</DependentUpon>
+    </Content>
+    <Content Include="Content\profile.css">
+      <DependentUpon>profile.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\profile.min.css">
+      <DependentUpon>profile.css</DependentUpon>
     </Content>
     <Content Include="Content\stylelayout.css" />
     <Content Include="Content\stylelayout.min.css">
@@ -127,6 +190,18 @@
     </Content>
     <Content Include="Content\Site.css" />
     <Content Include="Content\index.css" />
+    <Content Include="Content\UpdateAddress.css">
+      <DependentUpon>UpdateAddress.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\UpdateAddress.min.css">
+      <DependentUpon>UpdateAddress.css</DependentUpon>
+    </Content>
+    <Content Include="Content\UpdatePassword.css">
+      <DependentUpon>UpdatePassword.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\UpdatePassword.min.css">
+      <DependentUpon>UpdatePassword.css</DependentUpon>
+    </Content>
     <Content Include="Global.asax" />
     <Content Include="image\cart.png" />
     <Content Include="image\heart.png" />
@@ -143,6 +218,7 @@
     <Content Include="image\product\Snack_rong_bien.png" />
     <Content Include="image\product\TaoMy.png" />
     <Content Include="image\product\vietquoc.png" />
+    <Content Include="image\send.png" />
     <Content Include="image\star.png" />
     <Content Include="image\user.png" />
     <Content Include="Models\ModelWebNongSan.Context.tt">
@@ -160,11 +236,19 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\ManagerAccountController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ManagerCategoryController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ManagerCouponController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ManagerOrderController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductAdminController.cs" />
+    <Compile Include="Areas\Admin\Controllers\StatisticsController.cs" />
+    <Compile Include="Areas\Admin\Data\DailyStatistic.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Data\OrderDetailViewModel.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -189,7 +273,6 @@
     <Compile Include="Models\Feedback.cs">
       <DependentUpon>ModelWebNongSan.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\MapAccount.cs" />
     <Compile Include="Models\ModelWebNongSan.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -235,6 +318,17 @@
     <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Admin\Views\ProductAdmin\UpdateProduct.cshtml" />
     <Content Include="Areas\Admin\Views\ProductAdmin\UpdateImageProduct.cshtml" />
+    <Content Include="Areas\Admin\Views\ManagerAccount\ListAccount.cshtml" />
+    <Content Include="Areas\Admin\Views\ManagerAccount\UpdateAccount.cshtml" />
+    <Content Include="Areas\Admin\Views\ManagerAccount\UpdateImage.cshtml" />
+    <Content Include="Areas\Admin\Views\ManagerCategory\ListCategory.cshtml" />
+    <Content Include="Areas\Admin\Views\ManagerCategory\CreateCategory.cshtml" />
+    <Content Include="Areas\Admin\Views\ManagerCategory\UpdateCategory.cshtml" />
+    <Content Include="Areas\Admin\Views\ManagerCoupon\ListCoupon.cshtml" />
+    <Content Include="Areas\Admin\Views\ManagerCoupon\CreateCoupon.cshtml" />
+    <Content Include="Areas\Admin\Views\ManagerCoupon\UpdateCoupon.cshtml" />
+    <Content Include="Areas\Admin\Views\ManagerOrder\ListOrder.cshtml" />
+    <Content Include="Areas\Admin\Views\Statistics\OrderStatusStatistics.cshtml" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
@@ -242,6 +336,7 @@
     <Content Include="Content\stylelayout.scss" />
     <Content Include="Content\index.scss" />
     <Content Include="Content\Site.scss" />
+    <Content Include="Content\product.scss" />
     <EntityDeploy Include="Models\ModelWebNongSan.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ModelWebNongSan.Designer.cs</LastGenOutput>
@@ -249,7 +344,15 @@
     <Content Include="Models\ModelWebNongSan.edmx.diagram">
       <DependentUpon>ModelWebNongSan.edmx</DependentUpon>
     </Content>
-    <Content Include="Content\product.scss" />
+    <Content Include="Content\profile.scss" />
+    <Content Include="Content\AddressProfile.scss" />
+    <Content Include="Content\UpdateAddress.scss" />
+    <Content Include="Content\UpdatePassword.scss" />
+    <Content Include="Content\ConfirmOTP.scss" />
+    <Content Include="Content\ForgotPassword.scss" />
+    <Content Include="Content\ComfirmPassword.scss" />
+    <Content Include="Content\DetailProduct.scss" />
+    <Content Include="Content\CartIndex.scss" />
     <None Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -262,6 +365,17 @@
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Cart\CartIndex.cshtml" />
     <Content Include="Views\Account\Profile.cshtml" />
+    <Content Include="Views\Account\AddressProfile.cshtml" />
+    <Content Include="Views\Account\CreateAddress.cshtml" />
+    <Content Include="Views\Account\UpdateAddress.cshtml" />
+    <Content Include="Views\Account\UpdatePassword.cshtml" />
+    <Content Include="Views\Order\OrderProduct.cshtml" />
+    <Content Include="Views\Shared\_LayoutAccount.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ConfirmOTP.cshtml" />
+    <Content Include="Views\Account\ComfirmPassword.cshtml" />
+    <Content Include="Views\Account\OrderCustomer.cshtml" />
+    <Content Include="Views\Cart\UpdateCart.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -271,7 +385,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Views\Order\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

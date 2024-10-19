@@ -12,6 +12,7 @@ namespace webbannongsan.Areas.Admin.Controllers
     {
         // GET: Admin/Product
         DB_TadNongSanEntities DB =new DB_TadNongSanEntities();
+        
         public ActionResult Index()
         {
             return View();
@@ -74,10 +75,20 @@ namespace webbannongsan.Areas.Admin.Controllers
             Product product = DB.Products.Find(id);
             var categoryProductID= DB.Categories.FirstOrDefault(i=>i.CategoryID==product.CategoryID);
             ViewBag.categoryName = categoryProductID.Name;
+            ViewBag.coupons = DB.Coupons.ToList();
+            Coupon couponTemp= DB.Coupons.FirstOrDefault(i=>i.CouponID==product.CouponID);
+            if (couponTemp != null)
+            {
+                ViewBag.couponName = couponTemp.Name;
+            }
+            else
+            {
+                ViewBag.couponName ="0";
+            }
             return View(product);
         }
         [HttpPost]
-        public ActionResult UpdateProduct(Product productnew,string categoryname)
+        public ActionResult UpdateProduct(Product productnew,string categoryname,int ?CouponID)
         {
             ViewBag.categories = DB.Categories.ToList();
             Product product = DB.Products.Find(productnew.ProductID);
@@ -87,6 +98,11 @@ namespace webbannongsan.Areas.Admin.Controllers
             product.Detail = productnew.Detail;
             product.PostingDate= productnew.PostingDate;
             product.Unit= productnew.Unit;
+            if (CouponID == 0)
+            {
+                product.CouponID = null;
+            }
+            product.CouponID =CouponID;
             var categoryTemp = DB.Categories.FirstOrDefault(i => i.Name == categoryname);
             product.CategoryID= categoryTemp.CategoryID;
             DB.SaveChanges();

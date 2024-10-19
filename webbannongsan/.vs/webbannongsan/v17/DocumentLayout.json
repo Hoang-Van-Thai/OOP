@@ -3,28 +3,28 @@
   "WorkspaceRootPath": "D:\\webbannongsan\\webbannongsan\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B3D264AB-6B83-4413-8437-11ABD9F51E10}|webbannongsan\\webbannongsan.csproj|d:\\webbannongsan\\webbannongsan\\webbannongsan\\views\\account\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B3D264AB-6B83-4413-8437-11ABD9F51E10}|webbannongsan\\webbannongsan.csproj|solutionrelative:webbannongsan\\views\\account\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3D264AB-6B83-4413-8437-11ABD9F51E10}|webbannongsan\\webbannongsan.csproj|d:\\webbannongsan\\webbannongsan\\webbannongsan\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B3D264AB-6B83-4413-8437-11ABD9F51E10}|webbannongsan\\webbannongsan.csproj|solutionrelative:webbannongsan\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3D264AB-6B83-4413-8437-11ABD9F51E10}|webbannongsan\\webbannongsan.csproj|d:\\webbannongsan\\webbannongsan\\webbannongsan\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3D264AB-6B83-4413-8437-11ABD9F51E10}|webbannongsan\\webbannongsan.csproj|solutionrelative:webbannongsan\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3D264AB-6B83-4413-8437-11ABD9F51E10}|webbannongsan\\webbannongsan.csproj|d:\\webbannongsan\\webbannongsan\\webbannongsan\\areas\\admin\\views\\productadmin\\listproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B3D264AB-6B83-4413-8437-11ABD9F51E10}|webbannongsan\\webbannongsan.csproj|solutionrelative:webbannongsan\\areas\\admin\\views\\productadmin\\listproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3D264AB-6B83-4413-8437-11ABD9F51E10}|webbannongsan\\webbannongsan.csproj|d:\\webbannongsan\\webbannongsan\\webbannongsan\\views\\product\\product.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{B3D264AB-6B83-4413-8437-11ABD9F51E10}|webbannongsan\\webbannongsan.csproj|D:\\webbannongsan\\webbannongsan\\webbannongsan\\views\\product\\product.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B3D264AB-6B83-4413-8437-11ABD9F51E10}|webbannongsan\\webbannongsan.csproj|solutionrelative:webbannongsan\\views\\product\\product.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3D264AB-6B83-4413-8437-11ABD9F51E10}|webbannongsan\\webbannongsan.csproj|d:\\webbannongsan\\webbannongsan\\webbannongsan\\areas\\admin\\controllers\\productadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3D264AB-6B83-4413-8437-11ABD9F51E10}|webbannongsan\\webbannongsan.csproj|solutionrelative:webbannongsan\\areas\\admin\\controllers\\productadmincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B3D264AB-6B83-4413-8437-11ABD9F51E10}|webbannongsan\\webbannongsan.csproj|d:\\webbannongsan\\webbannongsan\\webbannongsan\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3D264AB-6B83-4413-8437-11ABD9F51E10}|webbannongsan\\webbannongsan.csproj|solutionrelative:webbannongsan\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3D264AB-6B83-4413-8437-11ABD9F51E10}|webbannongsan\\webbannongsan.csproj|d:\\webbannongsan\\webbannongsan\\webbannongsan\\views\\cart\\cartindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B3D264AB-6B83-4413-8437-11ABD9F51E10}|webbannongsan\\webbannongsan.csproj|solutionrelative:webbannongsan\\views\\cart\\cartindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3D264AB-6B83-4413-8437-11ABD9F51E10}|webbannongsan\\webbannongsan.csproj|d:\\webbannongsan\\webbannongsan\\webbannongsan\\views\\cart\\updatecart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B3D264AB-6B83-4413-8437-11ABD9F51E10}|webbannongsan\\webbannongsan.csproj|solutionrelative:webbannongsan\\views\\cart\\updatecart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3D264AB-6B83-4413-8437-11ABD9F51E10}|webbannongsan\\webbannongsan.csproj|d:\\webbannongsan\\webbannongsan\\webbannongsan\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3D264AB-6B83-4413-8437-11ABD9F51E10}|webbannongsan\\webbannongsan.csproj|solutionrelative:webbannongsan\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3D264AB-6B83-4413-8437-11ABD9F51E10}|webbannongsan\\webbannongsan.csproj|d:\\webbannongsan\\webbannongsan\\webbannongsan\\views\\account\\ordercustomer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B3D264AB-6B83-4413-8437-11ABD9F51E10}|webbannongsan\\webbannongsan.csproj|solutionrelative:webbannongsan\\views\\account\\ordercustomer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -47,79 +47,79 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "D:\\webbannongsan\\webbannongsan\\webbannongsan\\Views\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "webbannongsan\\Views\\Account\\Register.cshtml",
-              "ToolTip": "D:\\webbannongsan\\webbannongsan\\webbannongsan\\Views\\Account\\Register.cshtml",
-              "RelativeToolTip": "webbannongsan\\Views\\Account\\Register.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-12T17:45:17.429Z",
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "D:\\webbannongsan\\webbannongsan\\webbannongsan\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "webbannongsan\\Controllers\\ProductController.cs",
+              "ToolTip": "D:\\webbannongsan\\webbannongsan\\webbannongsan\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "webbannongsan\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAADwvzkAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T13:13:24.295Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Profile.cshtml",
-              "DocumentMoniker": "D:\\webbannongsan\\webbannongsan\\webbannongsan\\Views\\Account\\Profile.cshtml",
-              "RelativeDocumentMoniker": "webbannongsan\\Views\\Account\\Profile.cshtml",
-              "ToolTip": "D:\\webbannongsan\\webbannongsan\\webbannongsan\\Views\\Account\\Profile.cshtml",
-              "RelativeToolTip": "webbannongsan\\Views\\Account\\Profile.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-12T17:17:56.111Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ListProduct.cshtml",
-              "DocumentMoniker": "D:\\webbannongsan\\webbannongsan\\webbannongsan\\Areas\\Admin\\Views\\ProductAdmin\\ListProduct.cshtml",
-              "RelativeDocumentMoniker": "webbannongsan\\Areas\\Admin\\Views\\ProductAdmin\\ListProduct.cshtml",
-              "ToolTip": "D:\\webbannongsan\\webbannongsan\\webbannongsan\\Areas\\Admin\\Views\\ProductAdmin\\ListProduct.cshtml",
-              "RelativeToolTip": "webbannongsan\\Areas\\Admin\\Views\\ProductAdmin\\ListProduct.cshtml",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAAAGkAAABRAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-12T15:21:55.824Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ProductAdminController.cs",
-              "DocumentMoniker": "D:\\webbannongsan\\webbannongsan\\webbannongsan\\Areas\\Admin\\Controllers\\ProductAdminController.cs",
-              "RelativeDocumentMoniker": "webbannongsan\\Areas\\Admin\\Controllers\\ProductAdminController.cs",
-              "ToolTip": "D:\\webbannongsan\\webbannongsan\\webbannongsan\\Areas\\Admin\\Controllers\\ProductAdminController.cs",
-              "RelativeToolTip": "webbannongsan\\Areas\\Admin\\Controllers\\ProductAdminController.cs",
-              "ViewState": "AgIAAH4AAAAAAAAAAAAIwBUAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T14:46:39.558Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "D:\\webbannongsan\\webbannongsan\\webbannongsan\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "webbannongsan\\Controllers\\AccountController.cs",
-              "ToolTip": "D:\\webbannongsan\\webbannongsan\\webbannongsan\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "webbannongsan\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAkwDYAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T14:46:26.517Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "Product.cshtml",
               "DocumentMoniker": "D:\\webbannongsan\\webbannongsan\\webbannongsan\\Views\\Product\\Product.cshtml",
               "RelativeDocumentMoniker": "webbannongsan\\Views\\Product\\Product.cshtml",
               "ToolTip": "D:\\webbannongsan\\webbannongsan\\webbannongsan\\Views\\Product\\Product.cshtml",
               "RelativeToolTip": "webbannongsan\\Views\\Product\\Product.cshtml",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAAEsAAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAiwIwAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-12T14:38:51.165Z",
+              "WhenOpened": "2024-10-18T18:25:52.988Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UpdateCart.cshtml",
+              "DocumentMoniker": "D:\\webbannongsan\\webbannongsan\\webbannongsan\\Views\\Cart\\UpdateCart.cshtml",
+              "RelativeDocumentMoniker": "webbannongsan\\Views\\Cart\\UpdateCart.cshtml",
+              "ToolTip": "D:\\webbannongsan\\webbannongsan\\webbannongsan\\Views\\Cart\\UpdateCart.cshtml",
+              "RelativeToolTip": "webbannongsan\\Views\\Cart\\UpdateCart.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-19T13:10:50.62Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CartIndex.cshtml",
+              "DocumentMoniker": "D:\\webbannongsan\\webbannongsan\\webbannongsan\\Views\\Cart\\CartIndex.cshtml",
+              "RelativeDocumentMoniker": "webbannongsan\\Views\\Cart\\CartIndex.cshtml",
+              "ToolTip": "D:\\webbannongsan\\webbannongsan\\webbannongsan\\Views\\Cart\\CartIndex.cshtml",
+              "RelativeToolTip": "webbannongsan\\Views\\Cart\\CartIndex.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-19T13:04:40.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "D:\\webbannongsan\\webbannongsan\\webbannongsan\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "webbannongsan\\Controllers\\CartController.cs",
+              "ToolTip": "D:\\webbannongsan\\webbannongsan\\webbannongsan\\Controllers\\CartController.cs",
+              "RelativeToolTip": "webbannongsan\\Controllers\\CartController.cs",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAwwGkAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T13:02:35.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OrderCustomer.cshtml",
+              "DocumentMoniker": "D:\\webbannongsan\\webbannongsan\\webbannongsan\\Views\\Account\\OrderCustomer.cshtml",
+              "RelativeDocumentMoniker": "webbannongsan\\Views\\Account\\OrderCustomer.cshtml",
+              "ToolTip": "D:\\webbannongsan\\webbannongsan\\webbannongsan\\Views\\Account\\OrderCustomer.cshtml",
+              "RelativeToolTip": "webbannongsan\\Views\\Account\\OrderCustomer.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-18T18:23:09.492Z",
               "EditorCaption": ""
             }
           ]
