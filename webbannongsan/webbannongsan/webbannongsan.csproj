@@ -376,6 +376,7 @@
     <Content Include="Views\Account\ComfirmPassword.cshtml" />
     <Content Include="Views\Account\OrderCustomer.cshtml" />
     <Content Include="Views\Cart\UpdateCart.cshtml" />
+    <Content Include="Views\Cart\ConfirmOrder.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

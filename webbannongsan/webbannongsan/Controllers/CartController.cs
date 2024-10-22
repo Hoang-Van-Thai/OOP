@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MailKit.Search;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -146,7 +147,77 @@ namespace webbannongsan.Controllers
             ViewBag.SelectedQuantities = selectedQuantities;
             ViewBag.TotalPrice = sumPrice; // Cập nhật tổng giá
             ViewBag.SumPrice = sumPrice; // Lưu vào ViewBag để truyền sang View
+
+            List<string> addressString = new List<string>();
+            List<Address> addresses = DB.Addresses.Where(i => i.AccountID == Ac.AccountID).ToList();
+            int defaultAdress = 0;
+            if (Ac.DefaultAddress != null)
+            {
+                defaultAdress = (int)Ac.DefaultAddress;
+                ViewBag.DefaultAdress = defaultAdress;
+            }
+            foreach (Address addressItem in addresses)
+            {
+                Ward ward = DB.Wards.FirstOrDefault(i => i.WardID == addressItem.WardID);
+                District district = DB.Districts.FirstOrDefault(i => i.DistrictID == ward.DistrictID);
+                Province province = DB.Provinces.FirstOrDefault(i => i.ProvinceID == district.ProvinceID);
+                addressString.Add(addressItem.Name + " " + ward.Name + " " + district.Name + " " + province.Name);
+            }
+            ViewBag.addresses = addresses;
+
+            ViewBag.addressString = addressString;
             return View(); // Chuyển đến trang xác nhận đơn hàng
+
+        }
+        [HttpPost]
+
+        public ActionResult ConfirmOrder(List<Product> selectedItems,List<int> selectedQuantities, string address, float totalPrice,float Discount)
+        {
+            var Ac = (Account)Session["Account"];
+            Order newOrder = new Order
+            {
+                AccountID = Ac.AccountID,
+                DefaultAddress = address,
+                OrderTime = DateTime.Now,
+                DeliveryTime = DateTime.Now.AddDays(3),
+                StatusOrder = 2,
+                Price = (decimal)(totalPrice * (1 - Discount)) // Sử dụng totalPrice.Value vì nó đã được kiểm tra  
+            };
+
+            DB.Orders.Add(newOrder);
+            DB.SaveChanges();
+            
+
+            // Lấy OrderID vừa tạo để lưu OrderDetails
+            var orderId = newOrder.OrderID;
+            for (int i = 0; i < selectedItems.Count; i++)
+            {
+                int item = selectedItems[i].AccountID;
+                var coupon = DB.Coupons.FirstOrDefault(m => m.CouponID == item);
+                var discountProduct = 1;
+                if (coupon == null)
+                {
+                   discountProduct = 1;
+                }
+                else
+                {
+                    discountProduct = (int)coupon.Discount;
+                }
+
+                OrderDetail orderDetail = new OrderDetail
+                {
+                    OrderID = orderId,
+                    ProductID = selectedItems[i].ProductID,
+                    Quantity = selectedQuantities[i],
+                    Coupon = discountProduct
+                };
+                DB.OrderDetails.Add(orderDetail);
+                DB.SaveChanges();
+            }
+            ViewBag.total = totalPrice;
+            ViewBag.address = address;
+            return View();
+
 
         }
     }
