@@ -74,7 +74,8 @@
     <!-- Hiển thị tổng tiền -->
     <p class="text-lg font-semibold mt-4">Tổng tiền: <span id="total-value">@totalPrice.ToString("#,0")</span> VND</p>
     <input type="hidden" id="totalPrice" name="totalPrice" value="@totalPrice" />
-
-    <button type="submit" class="mt-4 bg-blue-500 text-white font-semibold py-2 px-4 rounded shadow hover:bg-blue-600 transition text-sm">Thanh toán</button>
+    <p>@ViewBag.error</p>
+    <button type="submit" class="mt-4 bg-blue-500 text-white font-semibold py-2 px-4 rounded shadow hover:bg-blue-600 transition text-sm">Đặt hàng</button>
+    <a href="@Url.Action("Payment", "Cart", new { totalPrice = totalPrice, orderId = "12345" })" class="mt-4 bg-green-500 text-white font-semibold py-2 px-4 rounded shadow hover:bg-green-600 transition text-sm inline-block">Thanh toán</a>
 }
 <script src="https://cdn.tailwindcss.com"></script>

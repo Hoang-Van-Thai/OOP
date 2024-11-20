@@ -23,6 +23,7 @@
     <NavigationProperty Name="Orders" Relationship="Self.FK_Order_Account" FromRole="Account" ToRole="Orders" />
     <NavigationProperty Name="Products" Relationship="Self.FK_Product_Account" FromRole="Account" ToRole="Product" />
     <NavigationProperty Name="Products1" Relationship="Self.Wishlist" FromRole="Account" ToRole="Product" />
+    <NavigationProperty Name="Invoices" Relationship="DB_TadNongSanModel.FK__Invoice__MemberI__31B762FC" FromRole="Account" ToRole="Invoice" />
   </EntityType>
   <EntityType Name="Address">
     <Key>
@@ -143,6 +144,7 @@
     <NavigationProperty Name="Feedbacks" Relationship="Self.FK_Feedback_Product" FromRole="Product" ToRole="Feedback" />
     <NavigationProperty Name="OrderDetails" Relationship="Self.FK_OrderDetail_Product" FromRole="Product" ToRole="OrderDetail" />
     <NavigationProperty Name="Accounts" Relationship="Self.Wishlist" FromRole="Product" ToRole="Account" />
+    <NavigationProperty Name="InvoiceDetails" Relationship="DB_TadNongSanModel.FK__InvoiceDe__Produ__3587F3E0" FromRole="Product" ToRole="InvoiceDetail" />
   </EntityType>
   <EntityType Name="Province">
     <Key>
@@ -467,5 +469,94 @@
     <FunctionImport Name="SP_FindAddressUser">
       <Parameter Name="id" Mode="In" Type="Int32" />
     </FunctionImport>
+    <EntitySet Name="Invoices" EntityType="DB_TadNongSanModel.Invoice" />
+    <EntitySet Name="sysdiagrams" EntityType="DB_TadNongSanModel.sysdiagram" />
+    <EntitySet Name="InvoiceDetails" EntityType="DB_TadNongSanModel.InvoiceDetail" />
+    <AssociationSet Name="FK__Invoice__MemberI__31B762FC" Association="DB_TadNongSanModel.FK__Invoice__MemberI__31B762FC">
+      <End Role="Account" EntitySet="Accounts" />
+      <End Role="Invoice" EntitySet="Invoices" />
+    </AssociationSet>
+    <AssociationSet Name="FK__InvoiceDe__Invoi__3493CFA7" Association="DB_TadNongSanModel.FK__InvoiceDe__Invoi__3493CFA7">
+      <End Role="Invoice" EntitySet="Invoices" />
+      <End Role="InvoiceDetail" EntitySet="InvoiceDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK__InvoiceDe__Produ__3587F3E0" Association="DB_TadNongSanModel.FK__InvoiceDe__Produ__3587F3E0">
+      <End Role="Product" EntitySet="Products" />
+      <End Role="InvoiceDetail" EntitySet="InvoiceDetails" />
+    </AssociationSet>
   </EntityContainer>
+  <EntityType Name="Invoice">
+    <Key>
+      <PropertyRef Name="InvoiceId" />
+    </Key>
+    <Property Name="InvoiceId" Type="Int32" Nullable="false" />
+    <Property Name="MemberId" Type="Int32" Nullable="false" />
+    <Property Name="InvoiceDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="GivenName" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="Surname" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Account" Relationship="DB_TadNongSanModel.FK__Invoice__MemberI__31B762FC" FromRole="Invoice" ToRole="Account" />
+    <NavigationProperty Name="InvoiceDetails" Relationship="DB_TadNongSanModel.FK__InvoiceDe__Invoi__3493CFA7" FromRole="Invoice" ToRole="InvoiceDetail" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="InvoiceDetail">
+    <Key>
+      <PropertyRef Name="InvoiceId" />
+      <PropertyRef Name="ProductId" />
+      <PropertyRef Name="Price" />
+      <PropertyRef Name="Quantity" />
+    </Key>
+    <Property Name="InvoiceId" Type="Int32" Nullable="false" />
+    <Property Name="ProductId" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="Quantity" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="Invoice" Relationship="DB_TadNongSanModel.FK__InvoiceDe__Invoi__3493CFA7" FromRole="InvoiceDetail" ToRole="Invoice" />
+    <NavigationProperty Name="Product" Relationship="DB_TadNongSanModel.FK__InvoiceDe__Produ__3587F3E0" FromRole="InvoiceDetail" ToRole="Product" />
+  </EntityType>
+  <Association Name="FK__Invoice__MemberI__31B762FC">
+    <End Type="DB_TadNongSanModel.Account" Role="Account" Multiplicity="1" />
+    <End Type="DB_TadNongSanModel.Invoice" Role="Invoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="AccountID" />
+      </Principal>
+      <Dependent Role="Invoice">
+        <PropertyRef Name="MemberId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__InvoiceDe__Invoi__3493CFA7">
+    <End Type="DB_TadNongSanModel.Invoice" Role="Invoice" Multiplicity="1" />
+    <End Type="DB_TadNongSanModel.InvoiceDetail" Role="InvoiceDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Invoice">
+        <PropertyRef Name="InvoiceId" />
+      </Principal>
+      <Dependent Role="InvoiceDetail">
+        <PropertyRef Name="InvoiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__InvoiceDe__Produ__3587F3E0">
+    <End Type="DB_TadNongSanModel.Product" Role="Product" Multiplicity="1" />
+    <End Type="DB_TadNongSanModel.InvoiceDetail" Role="InvoiceDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="InvoiceDetail">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

@@ -100,3 +100,6 @@ D:\webbannongsan\webbannongsan\webbannongsan\bin\MimeKit.dll.config
 D:\webbannongsan\webbannongsan\webbannongsan\bin\System.Formats.Asn1.xml
 D:\webbannongsan\webbannongsan\webbannongsan\bin\System.Threading.Tasks.Extensions.xml
 D:\webbannongsan\webbannongsan\webbannongsan\bin\System.ValueTuple.xml
+D:\webbannongsan\webbannongsan\webbannongsan\bin\log4net.dll
+D:\webbannongsan\webbannongsan\webbannongsan\bin\log4net.pdb
+D:\webbannongsan\webbannongsan\webbannongsan\bin\log4net.xml

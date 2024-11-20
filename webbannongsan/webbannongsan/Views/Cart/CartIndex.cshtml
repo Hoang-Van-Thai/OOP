@@ -5,6 +5,12 @@
 @{
     ViewBag.Title = "Giỏ hàng";
 }
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger" style="color:red;font-size:20px;">
+        @TempData["ErrorMessage"]
+    </div>
+}
 
 <form method="post" action="/Cart/UpdateCart" class="cart-form">
     @if (Model != null && Model.Any())
@@ -23,7 +29,8 @@
                     <p class="product-price">@finalPrice.ToString("#,0") VND</p>
                     <input type="checkbox" name="selectedProducts" value="@product.ProductID" class="product-checkbox" data-price="@finalPrice" onchange="updateTotal()" />
                 </div>
-                <a href="@Url.Action("RemoveFromCart", new { productId = product.ProductID })">Xóa</a>
+                @*<a href="@Url.Action("RemoveFromCart", new { productId = product.ProductID })">Xóa</a>*@
+                <a href="javascript:void(0)" id="btnxoa">Xóa</a>
             </div>
         }
     }

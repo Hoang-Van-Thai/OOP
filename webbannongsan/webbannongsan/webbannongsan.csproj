@@ -55,6 +55,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="log4net, Version=3.0.2.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.3.0.2\lib\net462\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="MailKit, Version=4.8.0.0, Culture=neutral, PublicKeyToken=4e064fe7c44a8f1b, processorArchitecture=MSIL">
       <HintPath>..\packages\MailKit.4.8.0\lib\net47\MailKit.dll</HintPath>
     </Reference>
@@ -131,6 +134,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\js\main-scripts.js" />
     <Content Include="Content\AddressProfile.css">
       <DependentUpon>AddressProfile.scss</DependentUpon>
     </Content>
@@ -247,6 +251,7 @@
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="Controllers\PaymentController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Data\OrderDetailViewModel.cs" />
     <Compile Include="Global.asax.cs">
@@ -271,6 +276,12 @@
       <DependentUpon>ModelWebNongSan.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Feedback.cs">
+      <DependentUpon>ModelWebNongSan.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Invoice.cs">
+      <DependentUpon>ModelWebNongSan.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\InvoiceDetail.cs">
       <DependentUpon>ModelWebNongSan.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ModelWebNongSan.Context.cs">
@@ -301,6 +312,9 @@
       <DependentUpon>ModelWebNongSan.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Role.cs">
+      <DependentUpon>ModelWebNongSan.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagram.cs">
       <DependentUpon>ModelWebNongSan.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Ward.cs">
@@ -377,6 +391,9 @@
     <Content Include="Views\Account\OrderCustomer.cshtml" />
     <Content Include="Views\Cart\UpdateCart.cshtml" />
     <Content Include="Views\Cart\ConfirmOrder.cshtml" />
+    <Content Include="Views\Cart\Payment.cshtml" />
+    <Content Include="Views\Cart\PaymentReturn.cshtml" />
+    <Content Include="Views\Payment\ConfirmPaymentClient.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

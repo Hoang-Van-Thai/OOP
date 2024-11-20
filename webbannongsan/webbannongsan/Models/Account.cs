@@ -24,6 +24,7 @@ namespace webbannongsan.Models
             this.Orders = new HashSet<Order>();
             this.Products = new HashSet<Product>();
             this.Products1 = new HashSet<Product>();
+            this.Invoices = new HashSet<Invoice>();
         }
     
         public int AccountID { get; set; }
@@ -53,5 +54,7 @@ namespace webbannongsan.Models
         public virtual ICollection<Product> Products { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Product> Products1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Invoice> Invoices { get; set; }
     }
 }

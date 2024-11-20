@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
+using System.Security.Claims;
 using System.Web;
 using System.Web.Mvc;
 using webbannongsan.Models;
@@ -14,16 +16,16 @@ namespace webbannongsan.Controllers
         DB_TadNongSanEntities DB = new DB_TadNongSanEntities();
         public ActionResult CartIndex()
         {
-            
+
             var Ac = (Account)Session["Account"];
             if (Ac == null)
             {
                 return RedirectToAction("Login", "Account");
             }
-            List<int>cartQuantity = new List<int>();  
+            List<int> cartQuantity = new List<int>();
             var AcID = Ac.AccountID;
-            var carts=DB.Carts.Where(i=>i.AccountID == AcID).ToList();
-            List<Product> products=new List<Product>();
+            var carts = DB.Carts.Where(i => i.AccountID == AcID).ToList();
+            List<Product> products = new List<Product>();
             float sumPrice = 0;
             //foreach(var cart in carts)
             //{
@@ -66,8 +68,8 @@ namespace webbannongsan.Controllers
         [HttpPost]
         public ActionResult CartIndex(int ProductID)
         {
-            Cart newCart= new Cart();
-            
+            Cart newCart = new Cart();
+
             var Ac = (Account)Session["Account"];
             if (Ac == null)
             {
@@ -88,8 +90,8 @@ namespace webbannongsan.Controllers
             ViewBag.sumPrice = sumPrice;
             ViewBag.CartQuantity = cartQuantity;
 
-            var cartTemp = DB.Carts.FirstOrDefault(i=>i.ProductID==ProductID && i.AccountID==Ac.AccountID);
-            if (cartTemp==null)
+            var cartTemp = DB.Carts.FirstOrDefault(i => i.ProductID == ProductID && i.AccountID == Ac.AccountID);
+            if (cartTemp == null)
             {
                 newCart.ProductID = ProductID;
                 newCart.AccountID = AcID;
@@ -171,8 +173,26 @@ namespace webbannongsan.Controllers
         }
         [HttpPost]
 
-        public ActionResult ConfirmOrder(List<Product> selectedItems,List<int> selectedQuantities, string address, float totalPrice,float Discount)
+        public ActionResult ConfirmOrder(List<Product> selectedItems, List<int> selectedQuantities, string address, float totalPrice, float Discount)
         {
+            for (int i = 0; i < selectedItems.Count; i++)
+            {
+                var selectedItem = selectedItems[i];
+                var selectQ = selectedQuantities[i];
+                Product product = DB.Products
+                    .FirstOrDefault(m => m.ProductID == selectedItem.ProductID);
+                if (product != null && product.Quantity >= selectQ)
+                {
+                    product.Quantity = product.Quantity - selectedQuantities[i];
+                    DB.SaveChanges();
+                }
+                else
+                {
+                    TempData["ErrorMessage"] = "Số lượng sản phẩm không đủ";
+                    return RedirectToAction("CartIndex");
+                }
+
+            }
             var Ac = (Account)Session["Account"];
             Order newOrder = new Order
             {
@@ -186,7 +206,7 @@ namespace webbannongsan.Controllers
 
             DB.Orders.Add(newOrder);
             DB.SaveChanges();
-            
+           
 
             // Lấy OrderID vừa tạo để lưu OrderDetails
             var orderId = newOrder.OrderID;
@@ -197,7 +217,7 @@ namespace webbannongsan.Controllers
                 var discountProduct = 1;
                 if (coupon == null)
                 {
-                   discountProduct = 1;
+                    discountProduct = 1;
                 }
                 else
                 {
@@ -214,11 +234,23 @@ namespace webbannongsan.Controllers
                 DB.OrderDetails.Add(orderDetail);
                 DB.SaveChanges();
             }
+            
             ViewBag.total = totalPrice;
             ViewBag.address = address;
             return View();
 
 
         }
+
+        public ActionResult RemoveFromCart(int productId)
+        {
+            Cart product = DB.Carts.FirstOrDefault(m => m.ProductID==productId);
+            DB.Carts.Remove(product);
+            DB.SaveChanges();
+            return RedirectToAction("CartIndex");
+        }
+
+
+
     }
 }

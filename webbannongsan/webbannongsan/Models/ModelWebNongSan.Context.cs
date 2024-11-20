@@ -40,6 +40,9 @@ namespace webbannongsan.Models
         public virtual DbSet<Province> Provinces { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<Ward> Wards { get; set; }
+        public virtual DbSet<Invoice> Invoices { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<InvoiceDetail> InvoiceDetails { get; set; }
     
         public virtual int SP_FindAddressUser(Nullable<int> id)
         {

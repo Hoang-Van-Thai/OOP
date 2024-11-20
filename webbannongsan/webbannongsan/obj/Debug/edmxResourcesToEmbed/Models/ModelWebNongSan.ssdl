@@ -74,6 +74,32 @@
     <Property Name="AccountID" Type="int" Nullable="false" />
     <Property Name="ProductID" Type="int" Nullable="false" />
   </EntityType>
+  <EntityType Name="Invoice">
+    <Key>
+      <PropertyRef Name="InvoiceId" />
+    </Key>
+    <Property Name="InvoiceId" Type="int" Nullable="false" />
+    <Property Name="MemberId" Type="int" Nullable="false" />
+    <Property Name="InvoiceDate" Type="datetime" Nullable="false" />
+    <Property Name="GivenName" Type="nvarchar" MaxLength="16" Nullable="false" />
+    <Property Name="Surname" Type="nvarchar" MaxLength="32" />
+    <Property Name="Phone" Type="varchar" MaxLength="16" Nullable="false" />
+    <Property Name="Address" Type="nvarchar" MaxLength="64" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DB_TadNongSan.dbo.InvoiceDetail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="InvoiceDetail">
+    <Key>
+      <PropertyRef Name="InvoiceId" />
+      <PropertyRef Name="ProductId" />
+      <PropertyRef Name="Price" />
+      <PropertyRef Name="Quantity" />
+    </Key>
+    <Property Name="InvoiceId" Type="int" Nullable="false" />
+    <Property Name="ProductId" Type="int" Nullable="false" />
+    <Property Name="Price" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="Quantity" Type="smallint" Nullable="false" />
+  </EntityType>
   <EntityType Name="OrderDetail">
     <Key>
       <PropertyRef Name="ProductID" />
@@ -126,6 +152,16 @@
     <Property Name="RoleID" Type="nvarchar" MaxLength="10" Nullable="false" />
     <Property Name="RoleName" Type="nvarchar" MaxLength="100" Nullable="false" />
   </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
   <EntityType Name="Ward">
     <Key>
       <PropertyRef Name="WardID" />
@@ -151,6 +187,42 @@
       </Principal>
       <Dependent Role="Account">
         <PropertyRef Name="DefaultAddress" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Invoice__MemberI__31B762FC">
+    <End Role="Account" Type="Self.Account" Multiplicity="1" />
+    <End Role="Invoice" Type="Self.Invoice" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="AccountID" />
+      </Principal>
+      <Dependent Role="Invoice">
+        <PropertyRef Name="MemberId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__InvoiceDe__Invoi__3493CFA7">
+    <End Role="Invoice" Type="Self.Invoice" Multiplicity="1" />
+    <End Role="InvoiceDetail" Type="Self.InvoiceDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Invoice">
+        <PropertyRef Name="InvoiceId" />
+      </Principal>
+      <Dependent Role="InvoiceDetail">
+        <PropertyRef Name="InvoiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__InvoiceDe__Produ__3587F3E0">
+    <End Role="Product" Type="Self.Product" Multiplicity="1" />
+    <End Role="InvoiceDetail" Type="Self.InvoiceDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="InvoiceDetail">
+        <PropertyRef Name="ProductId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -381,16 +453,38 @@
     <EntitySet Name="Coupon" EntityType="Self.Coupon" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="District" EntityType="Self.District" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Feedback" EntityType="Self.Feedback" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Invoice" EntityType="Self.Invoice" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="OrderDetail" EntityType="Self.OrderDetail" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Province" EntityType="Self.Province" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Ward" EntityType="Self.Ward" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Wishlist" EntityType="Self.Wishlist" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InvoiceDetail" EntityType="Self.InvoiceDetail" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [InvoiceDetail].[InvoiceId] AS [InvoiceId], 
+    [InvoiceDetail].[ProductId] AS [ProductId], 
+    [InvoiceDetail].[Price] AS [Price], 
+    [InvoiceDetail].[Quantity] AS [Quantity]
+    FROM [dbo].[InvoiceDetail] AS [InvoiceDetail]</DefiningQuery>
+    </EntitySet>
     <AssociationSet Name="FK__Account__DefaultAddress" Association="Self.FK__Account__DefaultAddress">
       <End Role="Address" EntitySet="Address" />
       <End Role="Account" EntitySet="Account" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Invoice__MemberI__31B762FC" Association="Self.FK__Invoice__MemberI__31B762FC">
+      <End Role="Account" EntitySet="Account" />
+      <End Role="Invoice" EntitySet="Invoice" />
+    </AssociationSet>
+    <AssociationSet Name="FK__InvoiceDe__Invoi__3493CFA7" Association="Self.FK__InvoiceDe__Invoi__3493CFA7">
+      <End Role="Invoice" EntitySet="Invoice" />
+      <End Role="InvoiceDetail" EntitySet="InvoiceDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK__InvoiceDe__Produ__3587F3E0" Association="Self.FK__InvoiceDe__Produ__3587F3E0">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="InvoiceDetail" EntitySet="InvoiceDetail" />
     </AssociationSet>
     <AssociationSet Name="FK_Account_Role" Association="Self.FK_Account_Role">
       <End Role="Role" EntitySet="Role" />
